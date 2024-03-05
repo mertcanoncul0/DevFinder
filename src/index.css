@@ -1,0 +1,272 @@
+:root {
+  /* Light */
+  --body-color-light: #f6f8ff;
+  --title-color-light: #222731;
+  --theme-text-color-light: #4b6a9b;
+  --search-background-color-light: #fefefe;
+  --search-input-placeholder-color-light: #4b6a9b;
+  --search-input-color-light: #222731;
+  --user-card-background-color-light: #fefefe;
+  --user-card-title-color-light: #2b3442;
+  --user-card-date-color-light: #697c9a;
+  --user-card-repos-background-color-light: #f6f8ff;
+  --user-card-repo-subtitle-color-light: #4b6a9b;
+  --user-card-repo-title-color-light: #2b3442;
+
+  /* Dark */
+  --body-color-dark: #141d2f;
+  --title-color-dark: #ffffff;
+  --theme-text-color-dark: #ffffff;
+  --search-background-color-dark: #1e2a47;
+  --search-input-placeholder-color-dark: #ffffff;
+  --search-input-color-dark: #ffffff;
+  --user-card-background-color-dark: #1e2a47;
+  --user-card-title-color-dark: #ffffff;
+  --user-card-date-color-dark: #ffffff;
+  --user-card-repos-background-color-dark: #141d2f;
+  --user-card-repo-subtitle-color-dark: #ffffff;
+  --user-card-repo-title-color-dark: #ffffff;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --title-color: var(--title-color-dark);
+  --theme-text-color: var(--theme-text-color-dark);
+  --body-color: var(--body-color-dark);
+  --search-background-color: var(--search-background-color-dark);
+  --search-input-placeholder-color: var(--search-input-placeholder-color-dark);
+  --search-input-color: var(--search-input-color-dark);
+  --user-card-background-color: var(--user-card-background-color-dark);
+  --user-card-title-color: var(--user-card-title-color-dark);
+  --user-card-date-color: var(--user-card-date-color-dark);
+  --user-card-repos-background-color: var(
+    --user-card-repos-background-color-dark
+  );
+  --user-card-repo-subtitle-color: var(--user-card-repo-subtitle-color-dark);
+  --user-card-repo-title-color: var(--user-card-repo-title-color-dark);
+  --network-icon: #ffffff;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --title-color: var(--title-color-light);
+  --theme-text-color: var(--theme-text-color-light);
+  --body-color: var(--body-color-light);
+  --search-background-color: var(--search-background-color-light);
+  --search-input-placeholder-color: var(--search-input-placeholder-color-light);
+  --search-input-color: var(--search-input-color-light);
+  --user-card-background-color: var(--user-card-background-color-light);
+  --user-card-title-color: var(--user-card-title-color-light);
+  --user-card-date-color: var(--user-card-date-color-light);
+  --user-card-repos-background-color: var(
+    --user-card-repos-background-color-light
+  );
+  --user-card-repo-subtitle-color: var(--user-card-repo-subtitle-color-light);
+  --user-card-repo-title-color: var(--user-card-repo-title-color-light);
+}
+/* Reset Css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Space Mono", monospace;
+  background-color: var(--body-color);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root {
+  isolation: isolate;
+  padding: 32px 24px;
+  height: 100vh;
+  width: 100vw;
+}
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+input {
+  border: none;
+  outline: none;
+  background: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Code */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 36px;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon span {
+  color: var(--theme-text-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+.header-bottom {
+  margin-block-end: 16px;
+}
+
+.search-form {
+  background-color: var(--search-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px 7px;
+  border-radius: 15px;
+  height: 60px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.search-btn {
+  background-color: #0079ff;
+  padding: 12.5px 16px 12.5px 18px;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.search-input {
+  font-size: 13px;
+  color: var(--search-input-color);
+  width: 60%;
+}
+
+.search-input::placeholder {
+  color: var(--search-input-placeholder-color);
+}
+
+.user-card {
+  background-color: var(--user-card-background-color);
+  padding-inline: 24px;
+  padding-block: 32px 48px;
+  border-radius: 15px;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 33px;
+}
+
+.user-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--user-card-title-color);
+}
+
+.user-title-hashtag {
+  font-size: 14px;
+  color: #0079ff;
+  padding-block-end: 6px;
+}
+
+.user-created-at {
+  font-size: 14px;
+  color: var(--user-card-date-color);
+}
+
+.user-desc {
+  margin-bottom: 23px;
+}
+
+.user-repos-info {
+  padding: 18px 14px;
+  background-color: var(--user-card-repos-background-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.user-repo-info {
+  & h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--user-card-repo-subtitle-color);
+    font-weight: 400;
+  }
+
+  & span {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--user-card-repo-title-color);
+  }
+}
+
+.user-network {
+  & li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  & .network-icon path {
+    fill: var(--network-icon, #4b6a9b);
+  }
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
